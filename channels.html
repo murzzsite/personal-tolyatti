@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Карта каналов для посевов — Рабочий персонал</title>
+<meta name="description" content="Методика отбора Telegram-каналов, калькулятор окупаемости, три текста постов и план первой волны.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="img/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="materials.css?v=1">
+<style>#calc label{display:block;font-size:13px;font-weight:600}#calc input{width:100%;padding:10px 12px;border:1px solid var(--clr-border);border-radius:10px;font:inherit;margin-top:4px}</style>
+</head>
+<body>
+
+<div class="doc-bar">
+  <div class="doc-bar__inner">
+    <a href="report/" class="doc-bar__back">← <span>Страница проекта</span></a>
+    <div class="doc-bar__actions"><button class="btn btn--primary" onclick="window.print()">Сохранить в PDF</button></div>
+  </div>
+</div>
+
+<div class="container">
+<section class="doc-hero"><p class="eyebrow">Карта каналов для посевов</p><h1>Где размещать рекламу в Telegram, чтобы получать заявки</h1><p class="doc-hero__lead">Методика отбора каналов, калькулятор и план первой волны. Размещения оплачиваете вы, результат зависит от канала, текста и сезона и не гарантируется. Список конкретных каналов с цифрами охвата мы дополним по данным сервисов аналитики.</p><nav class="toc"><a href="#why">1. Зачем</a><a href="#crit">2. Критерии</a><a href="#types">3. Какие каналы</a><a href="#calc">4. Калькулятор</a><a href="#posts">5. Три поста</a><a href="#wave">6. Первая волна</a></nav></section><section class="doc-section" id="why"><h2>1. Зачем посевы</h2><p class="doc-section__lead">Поиск и карты растут за недели и месяцы. Посевы в местных каналах дают заявки быстрее: пока блог и карточки набирают вес.</p><div class="card"><p class="card__title">Что важно знать</p><ul class="ul"><li>Посев — разовая реклама в чужом канале. Оплачиваете размещение, а не клики.</li><li>Заявки приходят не со всех каналов. Нужно протестировать 5 каналов и оставить 1–2 лучших.</li><li>Метки в ссылке бота пока не работают, поэтому каналы разводим по датам и по отдельным ссылкам на сайт.</li></ul></div></section><section class="doc-section" id="crit"><h2>2. Критерии отбора канала</h2><p class="doc-section__lead">Проверяйте перед оплатой.</p><div class="tbl-wrap"><table class="tbl"><tr><th>Критерий</th><th>Что смотреть</th><th>Хорошо / плохо</th></tr><tr><td>География</td><td>Подписчики из Тольятти и Самарской области</td><td>Хорошо: местный канал. Плохо: общероссийский без привязки.</td></tr><tr><td>Охват поста</td><td>Средние просмотры последних 10 постов</td><td>Хорошо: стабильные просмотры. Плохо: скачки и спад.</td></tr><tr><td>Активность</td><td>Реакции, комментарии, ER</td><td>Хорошо: живая аудитория. Плохо: подписчиков много, реакций почти нет.</td></tr><tr><td>Накрутка</td><td>Резкие скачки подписчиков, просмотры без реакций</td><td>Плохо: резкие скачки.</td></tr><tr><td>Тема</td><td>Работа, подработка, строительство, бизнес, объявления Тольятти</td><td>Хорошо: заказчики и подрядчики в аудитории.</td></tr><tr><td>Цена и формат</td><td>Стоимость размещения, время в ленте</td><td>Сравнивайте по цене за 1000 просмотров.</td></tr></table></div></section><section class="doc-section" id="types"><h2>3. Какие каналы искать</h2><p class="doc-section__lead">Категории, в которых у вас есть шанс найти заказчиков.</p><div class="grid-2"><div class="card"><p class="card__title">Заказчики</p><ul class="ul"><li>Бизнес и предприниматели Тольятти.</li><li>Строительство, ремонт, подряды Самарской области.</li><li>Производство и логистика региона.</li></ul></div><div class="card"><p class="card__title">Подрядчики из других городов</p><ul class="ul"><li>Каналы тендеров и подрядчиков.</li><li>Профильные сообщества строителей.</li><li>Каналы про поиск рабочих и вахту.</li></ul></div></div></section><section class="doc-section" id="calc"><h2>4. Калькулятор окупаемости</h2><p class="doc-section__lead">Подставьте свои цифры. Значения по умолчанию условные: проверьте на первых размещениях.</p><div class="card" id="calc"><div class="grid-2">
+<label>Цена размещения, ₽ <input type="number" id="c1" value="3000"></label>
+<label>Охват поста (просмотры) <input type="number" id="c2" value="4000"></label>
+<label>Переходов на сайт или в бот, % от просмотров <input type="number" id="c3" value="1.5" step="0.1"></label>
+<label>Заявок из переходов, % <input type="number" id="c4" value="8" step="0.5"></label>
+<label>Заявок, ставших договорённостью, % <input type="number" id="c5" value="25"></label>
+<label>Выручка с одного заказчика за месяц, ₽ <input type="number" id="c6" value="100000"></label>
+</div>
+<table class="tbl" style="margin-top:14px"><tr><th>Показатель</th><th>Значение</th></tr>
+<tr><td>Цена за 1000 просмотров</td><td id="o1">—</td></tr><tr><td>Переходов</td><td id="o2">—</td></tr><tr><td>Заявок</td><td id="o3">—</td></tr><tr><td>Цена заявки</td><td id="o4">—</td></tr><tr><td>Договорённостей</td><td id="o5">—</td></tr><tr><td>Цена заказчика</td><td id="o6">—</td></tr><tr><td>Выручка за месяц при таком заказчике</td><td id="o7">—</td></tr></table>
+<p class="card__note">Цифры по умолчанию условные, это не обещание результата. Заменяйте их на реальные после первых размещений.</p></div></section><section class="doc-section" id="posts"><h2>5. Три текста поста</h2><p class="doc-section__lead">Короткие, без обещаний. Подставляйте ссылку на сайт.</p><div class="card"><p class="card__title">Пост 1: пики</p><p class="post">Нужны люди на смены на пик? Выводим рабочих на объекты Тольятти: производство, склад, стройка. Платите только за отработанные часы, от 500 ₽ в час. Люди выходят обычно за 2–5 дней. Расчёт: rp63.ru</p></div><div class="card"><p class="card__title">Пост 2: подрядчикам</p><p class="post">Подрядчик из другого города, у вас объект в Тольятти? Подберём рабочих на месте и передадим согласованных кандидатов. Платите только за принятых: 40–80 тыс. ₽ за сотрудника. Подробности: rp63.ru</p></div><div class="card"><p class="card__title">Пост 3: сезон</p><p class="post">Весна и лето — время уборки территорий и благоустройства. Выводим бригады на сезон, оплата за отработанные часы. Напишите объём и даты, ответим расчётом: rp63.ru</p></div></section><section class="doc-section" id="wave"><h2>6. План первой волны</h2><p class="doc-section__lead">Пять размещений, затем выводы.</p><div class="tbl-wrap"><table class="tbl"><tr><th>Шаг</th><th>Что делаем</th><th>Срок</th></tr><tr><td>1</td><td>Отбираем 5 каналов по критериям</td><td>неделя 1</td></tr><tr><td>2</td><td>Согласуем цену и дату размещения, готовим пост</td><td>неделя 1–2</td></tr><tr><td>3</td><td>Размещаем по одному в день или через день</td><td>неделя 2</td></tr><tr><td>4</td><td>Считаем заявки по датам и по отдельным ссылкам</td><td>неделя 3</td></tr><tr><td>5</td><td>Оставляем 1–2 лучших канала, остальные не повторяем</td><td>неделя 3–4</td></tr></table></div></section>
+</div>
+
+<script>document.querySelectorAll(".tbl").forEach(function(t){var h=[].map.call(t.querySelectorAll("th"),function(x){return x.textContent});if(!h.length)return;t.querySelectorAll("tr").forEach(function(r){[].forEach.call(r.children,function(c,i){if(c.tagName==="TD")c.setAttribute("data-label",h[i]||"")})})});</script>
+<script>
+(function(){
+  var ids=['c1','c2','c3','c4','c5','c6'];
+  function n(i){return parseFloat(document.getElementById(i).value)||0}
+  function f(x){return Math.round(x).toLocaleString('ru-RU')}
+  function calc(){
+    var cost=n('c1'),reach=n('c2'),ctr=n('c3')/100,lead=n('c4')/100,deal=n('c5')/100,rev=n('c6');
+    var clicks=reach*ctr,leads=clicks*lead,deals=leads*deal;
+    document.getElementById('o1').textContent=reach?f(cost/reach*1000)+' ₽':'—';
+    document.getElementById('o2').textContent=f(clicks);
+    document.getElementById('o3').textContent=leads.toFixed(1);
+    document.getElementById('o4').textContent=leads?f(cost/leads)+' ₽':'—';
+    document.getElementById('o5').textContent=deals.toFixed(2);
+    document.getElementById('o6').textContent=deals?f(cost/deals)+' ₽':'—';
+    document.getElementById('o7').textContent=f(deals*rev)+' ₽';
+  }
+  ids.forEach(function(i){document.getElementById(i).addEventListener('input',calc)});calc();
+})();
+</script>
+</body>
+</html>

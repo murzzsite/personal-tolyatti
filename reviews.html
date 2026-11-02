@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Отзывы — Рабочий персонал</title>
+<meta name="description" content="QR-плакат для отзывов и десять шаблонов ответов на отзывы.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="img/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="materials.css?v=1">
+<style>
+  .poster { max-width: 520px; margin: 0 auto; background: #fff; border: 2px solid var(--clr-accent-dark); border-radius: 24px; padding: 40px 32px; text-align: center; }
+  .poster h2 { font-size: 30px; }
+  .poster__qr { display: flex; justify-content: center; margin: 24px 0; }
+  .poster__qr canvas, .poster__qr img { border: 8px solid #fff; }
+  .poster__name { color: var(--clr-ink-soft); font-size: 15px; }
+  .poster-tools { max-width: 520px; margin: 0 auto 24px; }
+  .poster-tools input { width: 100%; padding: 12px 14px; border: 1px solid var(--clr-border); border-radius: 10px; font: inherit; }
+  @media print { .poster-tools, .doc-section--replies { display: none !important; } .poster { border: 3px solid #000; margin-top: 30px; } }
+</style>
+</head>
+<body>
+
+<div class="doc-bar">
+  <div class="doc-bar__inner">
+    <a href="report/" class="doc-bar__back">← <span>Страница проекта</span></a>
+    <div class="doc-bar__actions"><a href="cards.html" class="btn btn--ghost">Карточки</a><button class="btn btn--primary" onclick="window.print()">Сохранить в PDF</button></div>
+  </div>
+</div>
+
+<div class="container">
+<section class="doc-hero"><p class="eyebrow">Отзывы</p><h1>QR-плакат и готовые ответы на отзывы</h1><p class="doc-hero__lead">Отзывы в карточках на картах и ссылка, которую можно показать заказчику после объекта. Сначала создайте карточки, потом вставьте ссылку на отзыв в поле ниже: плакат обновится.</p></section>
+<section class="doc-section"><h2>1. QR-плакат</h2>
+<p class="doc-section__lead">Вставьте ссылку на отзыв в вашей карточке (Яндекс Карты, 2ГИС или Google): откройте карточку, нажмите «Оставить отзыв» и скопируйте адрес. Пока ссылки нет, в коде стоит адрес сайта.</p>
+<div class="poster-tools"><input id="reviewUrl" type="url" placeholder="Вставьте ссылку на отзыв в карточке" value="https://rp63.ru/"></div>
+<div class="poster">
+  <p class="eyebrow">Рабочий персонал · Тольятти</p>
+  <h2>Работали с нами? Оставьте отзыв</h2>
+  <p>Наведите камеру телефона на код. Это займёт минуту и поможет другим компаниям сделать выбор.</p>
+  <div class="poster__qr" id="qr"></div>
+  <p class="poster__name">Спасибо, что доверяете!</p>
+</div></section>
+<section class="doc-section doc-section--replies"><h2>2. Десять шаблонов ответов на отзывы</h2>
+<p class="doc-section__lead">Подставляйте имя и деталь из отзыва, чтобы ответ не выглядел шаблонным. Не раскрывайте в ответах подробности работы с конкретными заказчиками.</p>
+<h3>Положительные</h3><div class="grid-2"><div class="card"><p>1. «Спасибо, [имя]! Рады, что людей удалось вывести на объект вовремя. Если понадобится больше людей на пике, пишите.»</p></div><div class="card"><p>2. «[Имя], благодарим за тёплые слова. Для нас главное, чтобы вы понимали, за что платите: за отработанные часы. Рады, что это удобно.»</p></div><div class="card"><p>3. «Спасибо за отзыв! Приятно, что [деталь из отзыва] оказалась для вас важной. Успехов вашему объекту!»</p></div><div class="card"><p>4. «[Имя], спасибо, что рекомендуете. Будем рады помочь вашим коллегам и партнёрам.»</p></div><div class="card"><p>5. «Благодарим! Запуск смен был непростым, и приятно, что мы вместе довели объект до результата.»</p></div></div>
+<h3 style="margin-top:22px">Негативные</h3><div class="grid-2"><div class="card"><p>6. «[Имя], спасибо, что написали. Сожалеем о сложностях. Напишите нам в Telegram @workcrews или позвоните, разберём ситуацию и найдём решение.»</p></div><div class="card"><p>7. «Спасибо за отзыв. Нам важно разобраться, что произошло со сменой. Уточните, пожалуйста, объект и дату: проверим и ответим.»</p></div><div class="card"><p>8. «Сожалеем, что человек не подошёл. Мы заменяем сотрудников в течение 1–3 дней. Свяжитесь с нами, чтобы решить вопрос.»</p></div><div class="card"><p>9. «Благодарим за обратную связь, она помогает работать лучше. Предложим варианты по вашему случаю, пока рядом с объектом люди нужны.»</p></div><div class="card"><p>10. «Спасибо, что поделились. Хотим исправить ситуацию: позвоните по номеру +7 927 268-29-30, и мы договоримся.»</p></div></div></section>
+</div>
+
+<script>document.querySelectorAll(".tbl").forEach(function(t){var h=[].map.call(t.querySelectorAll("th"),function(x){return x.textContent});if(!h.length)return;t.querySelectorAll("tr").forEach(function(r){[].forEach.call(r.children,function(c,i){if(c.tagName==="TD")c.setAttribute("data-label",h[i]||"")})})});</script>
+<script src="js/qrcode.min.js"></script>
+<script>
+(function(){
+  var box = document.getElementById('qr'), input = document.getElementById('reviewUrl');
+  function render(){ var url=(input.value||'').trim(); box.innerHTML=''; if(!url) return; new QRCode(box,{text:url,width:220,height:220,correctLevel:QRCode.CorrectLevel.M}); }
+  input.addEventListener('input', render); render();
+})();
+</script>
+</body>
+</html>
