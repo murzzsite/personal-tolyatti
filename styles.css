@@ -186,3 +186,34 @@ section{padding:84px 0}
 @media (max-width:380px){
   .logo{font-size:18px}
 }
+
+.form__consent{display:flex;flex-direction:row;align-items:flex-start;gap:10px;font-size:13px;line-height:1.45;color:var(--muted);margin:4px 0 12px}
+.form__consent input{margin-top:2px;width:18px;height:18px;flex:none;accent-color:var(--acc)}
+.form__consent a{color:var(--acc);font-weight:600;text-decoration:underline}
+.cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:120;max-width:720px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--sh);padding:16px 18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.cookie p{flex:1 1 240px;font-size:13.5px;color:var(--muted)}
+.cookie a{color:var(--acc);font-weight:600}
+.cookie__actions{display:flex;gap:8px;flex-wrap:wrap}
+.cookie .btn{padding:9px 16px;font-size:14px}
+.crumbs{font-size:13px;color:var(--muted);margin-bottom:18px}
+.crumbs a{color:var(--acc)}
+.hero--page{padding:48px 0 56px}
+.svc{max-width:860px}
+.svc h1{font-size:clamp(30px,4.4vw,46px)}
+.svc__price{display:flex;flex-direction:column;margin:0 0 26px}
+.svc__price b{font-family:var(--ff-h);font-size:36px;color:var(--acc);font-weight:800;line-height:1.1}
+.svc__price span{color:var(--muted);font-size:14.5px}
+.svc__text h2{font-size:26px;margin:30px 0 10px}
+.svc__text p{color:var(--muted);margin-bottom:12px}
+.svc__text .faq{margin-top:10px}
+.svc__links{list-style:none;display:grid;gap:8px;margin:8px 0 24px}
+.svc__links a{color:var(--acc);font-weight:600;text-decoration:underline}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:6px;transition:.2s}
+.svc-card:hover{border-color:var(--acc);transform:translateY(-2px)}
+.svc-card b{font-family:var(--ff-h);font-size:17px;line-height:1.25}
+.svc-card span{color:var(--acc);font-weight:700;font-size:14px}
+.doc h2{font-size:22px}
+.doc__date{font-size:13px;margin-top:26px}
+@media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.svc-grid{grid-template-columns:1fr}.cookie{left:10px;right:10px;bottom:10px}}

@@ -1,0 +1,43 @@
+{
+  "siteName": "Рабочий персонал",
+  "siteUrl": "https://rp63.ru",
+  "lang": "ru",
+  "repo": "murzzsite/personal-tolyatti",
+  "ref": "T6KVDDQNTV",
+  "workerUrl": "https://lead-relay.leestygpt.workers.dev",
+  "blogTitle": "Блог",
+  "blogDescription": "Практические статьи об аутсорсинге рабочего персонала в Тольятти: цены, сроки, как заказать и сравнить с наймом в штат",
+  "homeTitle": "Полезные статьи об аутсорсинге персонала",
+  "author": {
+    "name": "Рабочий персонал",
+    "jobTitle": "",
+    "type": "Organization"
+  },
+  "ctaTitle": "Остались вопросы?",
+  "ctaText": "Оставьте заявку — разберём вашу ситуацию и подскажем следующий шаг.",
+  "ctaButton": "Оставить заявку",
+  "ctaUrl": "/#contact",
+  "disclaimer": "",
+  "telegramNotify": true,
+  "cadenceDays": 7,
+  "homeLatest": 3,
+  "staticPages": [
+    "/",
+    "/autsorsing-personala-tolyatti.html",
+    "/gruzchiki-razrabochie-tolyatti.html",
+    "/rabochie-na-stroiku-tolyatti.html",
+    "/personal-dlya-proizvodstva-sklada-tolyatti.html",
+    "/podbor-rabochih-dlya-podryadchikov.html",
+    "/privacy.html",
+    "/consent.html"
+  ],
+  "indexNowKey": "0011bcfbd4d6ce5bc6002567638544aa",
+  "previewSecret": "2cc35e374301928f",
+  "theme": {
+    "bg": "var(--bg)",
+    "surface": "var(--card)",
+    "ink": "var(--ink)",
+    "soft": "var(--muted)",
+    "line": "var(--line)"
+  }
+}

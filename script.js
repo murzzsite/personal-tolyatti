@@ -1,6 +1,34 @@
 (() => {
   const LEAD_ENDPOINT = 'https://lead-relay.leestygpt.workers.dev/lead/T6KVDDQNTV';
 
+  // Яндекс Метрика: поставьте номер счётчика вместо 0 после его создания
+  const YM_ID = 0;
+  function loadMetrica() {
+    if (!YM_ID || window.ym) return;
+    (function (m, e, t, r, i, k, a) { m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); }; m[i].l = 1 * new Date(); k = e.createElement(t); a = e.getElementsByTagName(t)[0]; k.async = 1; k.src = r; a.parentNode.insertBefore(k, a); })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+    window.ym(YM_ID, 'init', { clickmap: true, trackLinks: true, accurateTrackBounce: true });
+  }
+  let cookieChoice = null;
+  try { cookieChoice = localStorage.getItem('rp_cookie'); } catch (_) {}
+  if (cookieChoice === 'all') loadMetrica();
+  if (!cookieChoice) {
+    const bar = document.createElement('div');
+    bar.className = 'cookie';
+    bar.setAttribute('role', 'dialog');
+    bar.setAttribute('aria-label', 'Использование cookie');
+    bar.innerHTML = '<p>Мы используем cookie, чтобы сайт работал, и сервис статистики «Яндекс Метрика», чтобы понимать, что улучшить. Подробнее в <a href="/privacy.html">политике конфиденциальности</a>.</p>' +
+      '<div class="cookie__actions"><button type="button" class="btn btn--primary" data-c="all">Принять</button>' +
+      '<button type="button" class="btn btn--ghost" data-c="necessary">Только необходимые</button></div>';
+    document.body.appendChild(bar);
+    bar.addEventListener('click', e => {
+      const c = e.target?.dataset?.c;
+      if (!c) return;
+      try { localStorage.setItem('rp_cookie', c); } catch (_) {}
+      if (c === 'all') loadMetrica();
+      bar.remove();
+    });
+  }
+
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -34,6 +62,11 @@
     const payload = {};
     new FormData(form).forEach((v, k) => { payload[k] = v; });
     if (payload._gotcha) return;
+    if (!payload.consent) {
+      alert('Отметьте согласие на обработку персональных данных');
+      return;
+    }
+    delete payload.consent;
     if (!payload.name || !payload.contact) {
       alert('Заполните имя и контакт для связи');
       return;
