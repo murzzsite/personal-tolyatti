@@ -1,8 +1,7 @@
 (() => {
   const LEAD_ENDPOINT = 'https://lead-relay.leestygpt.workers.dev/lead/T6KVDDQNTV';
 
-  // Яндекс Метрика: поставьте номер счётчика вместо 0 после его создания
-  const YM_ID = 0;
+  const YM_ID = 114081500;
   function loadMetrica() {
     if (!YM_ID || window.ym) return;
     (function (m, e, t, r, i, k, a) { m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); }; m[i].l = 1 * new Date(); k = e.createElement(t); a = e.getElementsByTagName(t)[0]; k.async = 1; k.src = r; a.parentNode.insertBefore(k, a); })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
@@ -81,6 +80,7 @@
       });
       if (!resp.ok) throw new Error('HTTP ' + resp.status);
       btn.textContent = 'Заявка отправлена ✓';
+      if (window.ym && YM_ID) window.ym(YM_ID, 'reachGoal', 'lead');
       form.reset();
     } catch (err) {
       console.error(err);
