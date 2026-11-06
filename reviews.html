@@ -15,7 +15,12 @@
 <style>
   .poster { max-width: 520px; margin: 0 auto; background: #fff; border: 2px solid var(--clr-accent-dark); border-radius: 24px; padding: 40px 32px; text-align: center; }
   .poster h2 { font-size: 30px; }
-  .poster__qr { display: flex; justify-content: center; margin: 24px 0; }
+  .poster__qrs { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
+  .qrw { text-align: center; font-weight: 700; font-size: 15px; color: var(--clr-accent-dark); }
+  .qrw div { margin-bottom: 6px; display: flex; justify-content: center; }
+  .qrw canvas, .qrw img { border: 6px solid #fff; }
+  .poster-tools label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+  .poster-tools input { margin-top: 4px; }
   .poster__qr canvas, .poster__qr img { border: 8px solid #fff; }
   .poster__name { color: var(--clr-ink-soft); font-size: 15px; }
   .poster-tools { max-width: 520px; margin: 0 auto 24px; }
@@ -35,13 +40,17 @@
 <div class="container">
 <section class="doc-hero"><p class="eyebrow">Отзывы</p><h1>QR-плакат и готовые ответы на отзывы</h1><p class="doc-hero__lead">Отзывы в карточках на картах и ссылка, которую можно показать заказчику после объекта. Сначала создайте карточки, потом вставьте ссылку на отзыв в поле ниже: плакат обновится.</p></section>
 <section class="doc-section"><h2>1. QR-плакат</h2>
-<p class="doc-section__lead">Вставьте ссылку на отзыв в вашей карточке (Яндекс Карты, 2ГИС или Google): откройте карточку, нажмите «Оставить отзыв» и скопируйте адрес. Пока ссылки нет, в коде стоит адрес сайта.</p>
-<div class="poster-tools"><input id="reviewUrl" type="url" placeholder="Вставьте ссылку на отзыв в карточке" value="https://rp63.ru/"></div>
+<p class="doc-section__lead">Ссылки на отзывы в 2ГИС и Google уже вставлены. Для Яндекс Карт вставьте ссылку в третье поле, когда карточка будет готова: код на плакате появится рядом. Пустое поле на плакат не попадает.</p>
+<div class="poster-tools">
+<label>2ГИС <input id="u2gis" type="url" value="https://2gis.ru/togliatti/reviews/70000001028477451/addReview?utm_source=lk"></label>
+<label>Google <input id="ugoogle" type="url" value="https://g.page/r/CT1DJ1DfOMUpEAI/review"></label>
+<label>Яндекс Карты (добавим, когда пришлёте ссылку) <input id="uyandex" type="url" placeholder="Вставьте ссылку на отзыв в Яндекс Картах"></label>
+</div>
 <div class="poster">
   <p class="eyebrow">Рабочий персонал · Тольятти</p>
   <h2>Работали с нами? Оставьте отзыв</h2>
-  <p>Наведите камеру телефона на код. Это займёт минуту и поможет другим компаниям сделать выбор.</p>
-  <div class="poster__qr" id="qr"></div>
+  <p>Наведите камеру телефона на код той карты, где вам удобнее. Это займёт минуту и поможет другим компаниям сделать выбор.</p>
+  <div class="poster__qrs" id="qrs"></div>
   <p class="poster__name">Спасибо, что доверяете!</p>
 </div></section>
 <section class="doc-section doc-section--replies"><h2>2. Десять шаблонов ответов на отзывы</h2>
@@ -54,9 +63,22 @@
 <script src="js/qrcode.min.js"></script>
 <script>
 (function(){
-  var box = document.getElementById('qr'), input = document.getElementById('reviewUrl');
-  function render(){ var url=(input.value||'').trim(); box.innerHTML=''; if(!url) return; new QRCode(box,{text:url,width:220,height:220,correctLevel:QRCode.CorrectLevel.M}); }
-  input.addEventListener('input', render); render();
+  var box = document.getElementById('qrs');
+  var items = [['u2gis','2ГИС'],['ugoogle','Google'],['uyandex','Яндекс Карты']];
+  function render(){
+    box.innerHTML='';
+    items.forEach(function(it){
+      var url=(document.getElementById(it[0]).value||'').trim();
+      if(!url) return;
+      var w=document.createElement('div'); w.className='qrw';
+      var q=document.createElement('div'); w.appendChild(q);
+      var l=document.createElement('span'); l.textContent=it[1]; w.appendChild(l);
+      box.appendChild(w);
+      new QRCode(q,{text:url,width:170,height:170,correctLevel:QRCode.CorrectLevel.M});
+    });
+  }
+  items.forEach(function(it){document.getElementById(it[0]).addEventListener('input',render)});
+  render();
 })();
 </script>
 </body>
