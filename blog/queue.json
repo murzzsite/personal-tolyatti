@@ -1,17 +1,14 @@
 {
   "site": "https://rp63.ru",
   "updated": "2026-11-09",
-  "awaiting": [
+  "awaiting": [],
+  "scheduled": [
     {
       "slug": "kak-nayti-rabochih-na-obekt-v-tolyatti",
-      "path": "articles/kak-nayti-rabochih-na-obekt-v-tolyatti.md",
       "title": "Как найти рабочих на объект в Тольятти, если вы подрядчик из другого города",
-      "description": "Подрядчик из другого города: три способа набрать рабочих на объект в Тольятти, что подготовить, сколько это стоит и как не потерять сроки. Чек-лист и шаги.",
-      "reading_time": "6 мин чтения",
-      "preview_url": "https://rp63.ru/blog/preview/cc942f484230/kak-nayti-rabochih-na-obekt-v-tolyatti/"
+      "date": "2026-11-12"
     }
   ],
-  "scheduled": [],
   "published": [
     {
       "slug": "stoimost-autsorsinga-personala-tolyatti",
