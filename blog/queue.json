@@ -1,15 +1,15 @@
 {
   "site": "https://rp63.ru",
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "awaiting": [],
-  "scheduled": [
+  "scheduled": [],
+  "published": [
     {
       "slug": "kak-nayti-rabochih-na-obekt-v-tolyatti",
       "title": "Как найти рабочих на объект в Тольятти, если вы подрядчик из другого города",
+      "url": "https://rp63.ru/blog/kak-nayti-rabochih-na-obekt-v-tolyatti/",
       "date": "2026-11-12"
-    }
-  ],
-  "published": [
+    },
     {
       "slug": "stoimost-autsorsinga-personala-tolyatti",
       "title": "Сколько стоит аутсорсинг рабочего персонала в Тольятти",
