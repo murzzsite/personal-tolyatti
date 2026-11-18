@@ -3,14 +3,6 @@
   "updated": "2026-11-18",
   "awaiting": [
     {
-      "slug": "autsorsing-ili-shtat-chto-vygodnee",
-      "path": "articles/autsorsing-ili-shtat-chto-vygodnee.md",
-      "title": "Аутсорсинг рабочего персонала или найм в штат: что выгоднее",
-      "description": "Аутсорсинг персонала или найм в штат: сравнение по гибкости, срокам, расходам и рискам. Таблица, чек-лист и пример расчёта на человеко-часах для Тольятти.",
-      "reading_time": "11 мин чтения",
-      "preview_url": "https://rp63.ru/blog/preview/2c5e8ffe0de6/autsorsing-ili-shtat-chto-vygodnee/"
-    },
-    {
       "slug": "kak-zakazat-gruzchikov-na-smenu-tolyatti",
       "path": "articles/kak-zakazat-gruzchikov-na-smenu-tolyatti.md",
       "title": "Как заказать грузчиков на смену в Тольятти: пошаговая инструкция",
@@ -27,7 +19,13 @@
       "preview_url": "https://rp63.ru/blog/preview/3aee42ee8cfb/personal-na-proizvodstvo-i-sklad-zakryt-pik/"
     }
   ],
-  "scheduled": [],
+  "scheduled": [
+    {
+      "slug": "autsorsing-ili-shtat-chto-vygodnee",
+      "title": "Аутсорсинг рабочего персонала или найм в штат: что выгоднее",
+      "date": "2026-11-19"
+    }
+  ],
   "published": [
     {
       "slug": "kak-nayti-rabochih-na-obekt-v-tolyatti",
