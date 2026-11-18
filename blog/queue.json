@@ -1,7 +1,32 @@
 {
   "site": "https://rp63.ru",
-  "updated": "2026-11-17",
-  "awaiting": [],
+  "updated": "2026-11-18",
+  "awaiting": [
+    {
+      "slug": "autsorsing-ili-shtat-chto-vygodnee",
+      "path": "articles/autsorsing-ili-shtat-chto-vygodnee.md",
+      "title": "Аутсорсинг рабочего персонала или найм в штат: что выгоднее",
+      "description": "Аутсорсинг персонала или найм в штат: сравнение по гибкости, срокам, расходам и рискам. Таблица, чек-лист и пример расчёта на человеко-часах для Тольятти.",
+      "reading_time": "11 мин чтения",
+      "preview_url": "https://rp63.ru/blog/preview/2c5e8ffe0de6/autsorsing-ili-shtat-chto-vygodnee/"
+    },
+    {
+      "slug": "kak-zakazat-gruzchikov-na-smenu-tolyatti",
+      "path": "articles/kak-zakazat-gruzchikov-na-smenu-tolyatti.md",
+      "title": "Как заказать грузчиков на смену в Тольятти: пошаговая инструкция",
+      "description": "Как заказать грузчиков и разнорабочих на смену в Тольятти: что указать в заявке, сколько стоит час, как проверить поставщика и что делать при невыходе.",
+      "reading_time": "10 мин чтения",
+      "preview_url": "https://rp63.ru/blog/preview/1396275021e4/kak-zakazat-gruzchikov-na-smenu-tolyatti/"
+    },
+    {
+      "slug": "personal-na-proizvodstvo-i-sklad-zakryt-pik",
+      "path": "articles/personal-na-proizvodstvo-i-sklad-zakryt-pik.md",
+      "title": "Персонал на производство и склад в Тольятти: как закрыть пиковую нагрузку",
+      "description": "Как закрыть пик на производстве и складе в Тольятти без лишнего штата: специальности, планирование смен и что согласовать с поставщиком персонала.",
+      "reading_time": "10 мин чтения",
+      "preview_url": "https://rp63.ru/blog/preview/3aee42ee8cfb/personal-na-proizvodstvo-i-sklad-zakryt-pik/"
+    }
+  ],
   "scheduled": [],
   "published": [
     {
