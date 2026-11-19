@@ -1,6 +1,6 @@
 {
   "site": "https://rp63.ru",
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "awaiting": [
     {
       "slug": "kak-zakazat-gruzchikov-na-smenu-tolyatti",
@@ -19,14 +19,14 @@
       "preview_url": "https://rp63.ru/blog/preview/3aee42ee8cfb/personal-na-proizvodstvo-i-sklad-zakryt-pik/"
     }
   ],
-  "scheduled": [
+  "scheduled": [],
+  "published": [
     {
       "slug": "autsorsing-ili-shtat-chto-vygodnee",
       "title": "Аутсорсинг рабочего персонала или найм в штат: что выгоднее",
+      "url": "https://rp63.ru/blog/autsorsing-ili-shtat-chto-vygodnee/",
       "date": "2026-11-19"
-    }
-  ],
-  "published": [
+    },
     {
       "slug": "kak-nayti-rabochih-na-obekt-v-tolyatti",
       "title": "Как найти рабочих на объект в Тольятти, если вы подрядчик из другого города",
